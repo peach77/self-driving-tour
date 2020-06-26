@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-
+// import Router from 'vue-router'
+import VueRouter from "vue-router";
 
 import Map from './components/Map'
 import MainPage1 from './components/MainPage1'
@@ -13,64 +13,126 @@ import Confirm from './components/Confirm';
 import Paypage from './components/Paypage'
 import Success from './components/Success'
 import Personal from './components/Personal'
-Vue.use(Router)
+// Vue.use(Router)
+Vue.use(VueRouter);
+// export default new Router({
 
-export default new Router({
-  mode: 'hash',
-    routes: [
-      {
-        path: '/',
-        component: MainPage1
-      },
-      {
-        path: '/Nanjing',
-        name: 'nanjing',
-        component:NanJing
-      },
-      {
-        path: '/Map',
-        name: 'map',
-        component:Map
-      },
-      {
-        path: '/Detials',
-        name: 'detials',
-        component:Detials
-      },
-      {
-        path: '/Leader',
-        name: 'leader',
-        component:Leader
-      },
-      {
-        path: '/Apply',
-        name: 'apply',
-        component:Apply
-      },
-      {
-        path: '/FillOrder',
-        name: 'fillorder',
-        component:FillOrder
-      },
-      {
-        path: '/Confirm',
-        name: 'Confirm',
-        component:Confirm
-      },
-      {
-        path: '/Paypage',
-        name: 'Paypage',
-        component:Paypage
-      },
-      {
-        path: '/Success',
-        name: 'Success',
-        component:Success
-      },
-      {
-        path: '/Personal',
-        name: 'Personal',
-        component:Personal
-      }
-    ]
-  })
+//     routes: [
+//       {
+//         path: '/',
+//         component: MainPage1
+//       },
+//       {
+//         path: '/Nanjing',
+//         name: 'nanjing',
+//         component:NanJing
+//       },
+//       {
+//         path: '/Map',
+//         name: 'map',
+//         component:Map
+//       },
+//       {
+//         path: '/Detials',
+//         name: 'detials',
+//         component:Detials
+//       },
+//       {
+//         path: '/Leader',
+//         name: 'leader',
+//         component:Leader
+//       },
+//       {
+//         path: '/Apply',
+//         name: 'apply',
+//         component:Apply
+//       },
+//       {
+//         path: '/FillOrder',
+//         name: 'fillorder',
+//         component:FillOrder
+//       },
+//       {
+//         path: '/Confirm',
+//         name: 'Confirm',
+//         component:Confirm
+//       },
+//       {
+//         path: '/Paypage',
+//         name: 'Paypage',
+//         component:Paypage
+//       },
+//       {
+//         path: '/Success',
+//         name: 'Success',
+//         component:Success
+//       },
+//       {
+//         path: '/Personal',
+//         name: 'Personal',
+//         component:Personal
+//       }
+//     ]
+//   })
+
+const routes = [
+  {
+            path: '/',
+            component: MainPage1
+          },
+          {
+            path: '/Nanjing',
+            name: 'nanjing',
+            component:NanJing
+          },
+          {
+            path: '/Map',
+            name: 'map',
+            component:Map
+          },
+          {
+            path: '/Detials',
+            name: 'detials',
+            component:Detials
+          },
+          {
+            path: '/Leader',
+            name: 'leader',
+            component:Leader
+          },
+          {
+            path: '/Apply',
+            name: 'apply',
+            component:Apply
+          },
+          {
+            path: '/FillOrder',
+            name: 'fillorder',
+            component:FillOrder
+          },
+          {
+            path: '/Confirm',
+            name: 'Confirm',
+            component:Confirm
+          },
+          {
+            path: '/Paypage',
+            name: 'Paypage',
+            component:Paypage
+          },
+          {
+            path: '/Success',
+            name: 'Success',
+            component:Success
+          },
+          {
+            path: '/Personal',
+            name: 'Personal',
+            component:Personal
+          }
+]
+  var router =  new VueRouter({
+    mode: 'hash',
+    routes
+})
+export default router;
